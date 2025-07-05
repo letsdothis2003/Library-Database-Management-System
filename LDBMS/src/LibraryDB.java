@@ -30,9 +30,9 @@ public class LibraryDB extends JFrame {
  * Other logic like that exists here. 
  * 
  */
-    private static final String DB_URL = "jdbc:mysql://localhost:XXXX/XXXX"; //Change last thing if necessary
-    private static final String DB_USER = "XXXX"; //Replace if necessary
-    private static final String DB_PASS = "XXXX"; // Replace if necessary
+    private static final String DB_URL = "jdbc:mysql://localhost:XXXX/XXXX"; //Change last thing. this is where your database is hooked up 
+    private static final String DB_USER = "XXXX"; //Replace this for username setup
+    private static final String DB_PASS = "XXXX"; // Replace and for the love of god use a good password 
 
     // Get database connection
     private static Connection getConnection() throws SQLException {
