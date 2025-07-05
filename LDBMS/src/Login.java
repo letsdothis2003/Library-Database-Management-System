@@ -24,10 +24,10 @@ public class Login extends JFrame {
 
         JLabel dbNameLabel = new JLabel("Database Name:");
         dbNameField = new JTextField(20);
-        dbNameField.setText("librarydb"); // Pre-fill with default for convenience
+        dbNameField.setText("XXXX"); //REPLACE WITH ACTUAL DB NAME
         JLabel passwordLabel = new JLabel("Password:");
         passwordField = new JPasswordField(20);
-        passwordField.setText("chyn331"); // Pre-fill with default for convenience
+        passwordField.setText("XXXX"); //REPLACE THIS WITH YOUR ACTUAL PASSWORD(AND MAKE SURE ITS A GOOD ONE)
 
         inputPanel.add(dbNameLabel);
         inputPanel.add(dbNameField);
@@ -51,10 +51,10 @@ public class Login extends JFrame {
     private void attemptLogin() {
         String dbName = dbNameField.getText().trim();
         String password = new String(passwordField.getPassword());
-        String user = "root"; // Replace by actual root
+        String user = "xxxx"; // REPLACE ACTUAL USERNAME 
 
      
-        String url = "jdbc:mysql://localhost:3306/" + dbName;
+        String url = "jdbc:mysql://localhost:XXXX/" + dbName; //cHANGE TO ACTUAL DB LINK PLEASE 
 
         try {
             // Attempt to establish a connection to the database
