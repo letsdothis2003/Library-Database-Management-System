@@ -13,4 +13,4 @@ Project members:
 - Abul Hasan (Testing and documentation)
 - Khalid Issa (Implementation)
 - Jason Lopez  (Testing)
-- Jessica Chen (Testing and Implmenation)
+- Jessica Chen (Testing and Implemention)
