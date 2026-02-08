@@ -2,21 +2,23 @@
 FROM eclipse-temurin:17-jdk-jammy as build
 WORKDIR /app
 
-# Copy the Maven wrapper and project files
-COPY . .
+# Copy Maven wrapper and pom first to cache dependencies
+COPY .mvn/ .mvn
+COPY mvnw pom.xml ./
+RUN chmod +x mvnw
+# Pre-download dependencies to save time and prevent timeouts
+RUN ./mvnw dependency:go-offline
 
-# Grant execute permission and build the JAR
-RUN chmod +x mvnw && ./mvnw clean package -DskipTests
+# Copy the rest of the source code and build
+COPY src ./src
+RUN ./mvnw clean package -DskipTests
 
 # Stage 2: Run the application
 FROM eclipse-temurin:17-jre-jammy
 WORKDIR /app
 
-# Copy the compiled JAR from the build stage
 COPY --from=build /app/target/*.jar app.jar
 
-# Expose the standard Spring Boot port
 EXPOSE 8080
 
-# Start the application
 ENTRYPOINT ["java", "-jar", "app.jar"]
