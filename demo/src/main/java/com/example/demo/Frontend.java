@@ -1,6 +1,4 @@
-/**
- * File Path: src/main/java/WebDemonstration/Frontend.java
- */
+
 package WebDemonstration;
 
 import org.springframework.boot.SpringApplication;
