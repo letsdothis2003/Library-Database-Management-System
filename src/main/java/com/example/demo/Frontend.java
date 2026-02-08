@@ -1,12 +1,9 @@
-
-package WebDemonstration;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * Entry point for the Spring Boot application.
- * This class tells the server to start the web engine and scan for @RestController classes.
+ * Package declaration removed to use the default package.
  */
 @SpringBootApplication
 public class Frontend {
